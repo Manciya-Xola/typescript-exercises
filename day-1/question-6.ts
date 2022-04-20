@@ -8,12 +8,16 @@
 interface Animal {
   name: string;
 }
-
+interface Cat extends Animal{
+  purrs:boolean;
+}
 // Extend the type:
 // Extend the Vehicle type alias with a Car intersection
 //    that has a `hasWheels` boolean
 type Vehicle = {
   name: string;
 };
-
+type Car = Vehicle&{
+  hasWheels:boolean;
+}
 export {};
